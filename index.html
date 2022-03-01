@@ -9,8 +9,13 @@
    <script type="text/javascript">
    // Create a variable called currentDate and store the current date using a built in JavaScript function.
    let pageView = 0;
-   let pageTitle = 'Page Title';
-   let pageAuthor = 'Page Author';
+   let pageTitle = 'Assignment -2';
+   let pageAuthor = 'Mohammed aljohani';
+   let date = new Date()
+   let day = date.getDate();
+   let month = date.getMonth()+1;
+   let year = date.getFullYear();
+   let currentDate = `${day}.${month}.${year}.`;
    </script>
  
  
@@ -26,6 +31,9 @@
     function pageViews() {
       pageView++;
       document.write(pageView);
+    }
+      function currentDate() {
+      document.write(currentDate);
     }
 
     </script>
