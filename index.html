@@ -1,49 +1,19 @@
 ---
-layout: home
+layout: default
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Assignment 2: CSIT 281 - JavaScript</title>
-<style>
-</style>
-</head>
-<body>
-   <script type="text/javascript">
-   // Create a variable called currentDate and store the current date using a built in JavaScript function.
-   let pageView = 0;
-   let pageTitle = 'Assignment -2';
-   let pageAuthor = 'Mohammed Aljohani';
-    let today = new Date();
-    let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+<article class="post">
 
-   </script>
- 
- 
+  <h1>{{ page.title }}</h1>
 
-   <script type="text/javascript">
-    // Create a function that writes the currentDate variable to the document.
-    function pageTitles() {
-      document.write(pageTitle);
-    }
-    function pageAuthors() {
-      document.write(pageAuthor);
-    }
-    function pageViews() {
-      pageView++;
-      document.write(pageView);
-    }
-      function currentDate() {
-      document.write(date);
-    }
+  <div class="entry">
+    {{ content }}
+  </div>
 
-    </script>
- 
-    <h1 class="page-title"><script>pageTitles();</script></h1>
-    <p>by: <script>pageAuthors();</script></p>
-    <!-- Print the current date using the function you created after the page author but before the page view counter. -->
-    <small><script>pageViews();</script></small>
-   <p>Date: <script>currentDate();</script></p>
- 
-</body>
-</html>
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+
+  <div class="comments">
+    {% include disqus.html disqus_identifier=page.disqus_identifier %}
+  </div>
+</article>
