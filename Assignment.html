@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Assignment- JavaScript</title>
+    <style></style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      
+    </script>
+
+    <script type="text/javascript">
+//Create an array called monthsOfTheYear that includes all 12 months.
+      // Have it print the string statement using document.write for each month.
+      function monthYear() {
+        //var a = parseInt(prompt("enter a month number please."), 10);
+        var a = 1
+        var monthsOfTheYear = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        var b = monthsOfTheYear[a - 1];
+        var monthDays;
+        switch (a) {
+          case 1:
+            monthDays = " has 30 days";
+            break;
+          case 2:
+            monthDays =
+              "has 28 days except on leap year when it has 29.";
+            break;
+          case 3:
+            monthDays= " has 31 days";
+            break;
+          case 4:
+            monthDays = "has 30 days";
+            break;
+          case 5:
+           monthDays = " has 31 days";
+            break;
+          case 6:
+           monthDays = " has 30 days";
+            break;
+          case 7:
+           monthDays = "has 31 days";
+            break;
+          case 8:
+           monthDays = " has 31 days";
+            break;
+          case 9:
+           monthDays = " has 30 days";
+            break;
+          case 10:
+          monthDays = " has 31 days";
+            break;
+          case 11:
+           monthDays = " has 30 days";
+            break;
+          case 12:
+           monthDays = " has 31 days";
+            break;
+        }
+        document.write(b + " " + monthDays);
+      }
+    </script>
+    <h1>Javascript script to get the number of days in a Month</h1>
+        <p><script>
+                monthYear();
+        </script></p>
+  </body>
+</html>
+
